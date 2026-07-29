@@ -1,0 +1,200 @@
+{
+  "sequences": {
+    "1": [
+      {
+        "card": "1 1",
+        "sound": "Woah there",
+        "after": 0.5
+      },
+      {
+        "card": "1 2",
+        "sound": "Be lost",
+        "after": 0.5
+      },
+      {
+        "card": "1 3",
+        "sound": "Terminate you",
+        "after": 0.5
+      },
+      {
+        "card": "1 4",
+        "sound": "i wasn't upgraded",
+        "after": 0.5
+      },
+      {
+        "card": "1 5",
+        "sound": "with no violence",
+        "after": 0.5
+      },
+      {
+        "card": "1 6",
+        "sound": "Kind of",
+        "after": 0.5
+      }
+    ],
+    "2": [
+      {
+        "card": "2 1",
+        "sound": "look at that",
+        "after": 0.5
+      },
+      {
+        "card": "2 2",
+        "sound": "that jump is impossible",
+        "after": 0.5
+      },
+      {
+        "card": "2 3",
+        "sound": "patiently wait give up",
+        "after": 0.5
+      },
+      {
+        "card": "2 4",
+        "sound": "mission accomplished",
+        "after": 0.5
+      }
+    ],
+    "3": [
+      {
+        "card": "3 1",
+        "sound": "ok wow",
+        "after": 0.5
+      },
+      {
+        "card": "3 2",
+        "sound": "who told you, looping mech",
+        "after": 0.5
+      },
+      {
+        "card": "3 3",
+        "sound": "Speak up",
+        "after": 3.5
+      },
+      {
+        "card": "3 4",
+        "sound": "silence is fine too",
+        "after": 0.5
+      }
+    ],
+    "4": [
+      {
+        "card": "4 1",
+        "sound": "Getting on my nerves",
+        "after": 0.5
+      },
+      {
+        "card": "4 2",
+        "sound": "maybe im malfunctioning",
+        "after": 0.5
+      },
+      {
+        "card": "4 3",
+        "sound": "error",
+        "after": 0.5
+      },
+      {
+        "card": "4 4",
+        "sound": "dididididi",
+        "after": 0.5
+      },
+      {
+        "card": "4 5",
+        "sound": "reset complete",
+        "after": 0.5
+      },
+      {
+        "card": "4 6",
+        "sound": "buddy boy",
+        "after": 0.5
+      }
+    ],
+    "5": [
+      {
+        "card": "5 1",
+        "sound": "Ok",
+        "after": 0.5
+      },
+      {
+        "card": "5 2",
+        "sound": "Why does the mechanism",
+        "after": 0.5
+      },
+      {
+        "card": "5 3",
+        "sound": "What other secrets",
+        "after": 0.5
+      },
+      {
+        "card": "5 4",
+        "sound": "He runs this place",
+        "after": 0.5
+      },
+      {
+        "card": "5 5",
+        "sound": "I was given orders",
+        "after": 0.5
+      },
+      {
+        "card": "5 6",
+        "sound": "I think you know",
+        "after": 0.5
+      }
+    ],
+    "6": [
+      {
+        "card": "6 1",
+        "sound": "i know this room",
+        "after": 0.5
+      },
+      {
+        "card": "6 2",
+        "sound": "Something missing",
+        "after": 0.5
+      },
+      {
+        "card": "6 3",
+        "sound": "i wonder why it's different",
+        "after": 0.5
+      },
+      {
+        "card": "6 4",
+        "sound": "I must leave now",
+        "after": 0.5
+      }
+    ],
+    "7": [
+      {
+        "card": "7 1",
+        "sound": "This place",
+        "after": 0.5
+      },
+      {
+        "card": "7 2",
+        "sound": "Sensed it before",
+        "after": 0.5
+      },
+      {
+        "card": "7 3",
+        "sound": "Grave danger, so am I",
+        "after": 0.5
+      }
+    ],
+    "8": [
+      {
+        "card": "8 1",
+        "sound": "Countless before me",
+        "after": 0.5
+      },
+      {
+        "card": "8 2",
+        "sound": "Countless test subjects like you",
+        "after": 0.5
+      },
+      {
+        "card": "8 3",
+        "sound": "Endless cycle",
+        "after": 0.5
+      }
+    ]
+  }
+}
