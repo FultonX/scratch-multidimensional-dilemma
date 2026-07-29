@@ -1,0 +1,365 @@
+{
+  "levels": [
+    {
+      "number": 1,
+      "background": "costume1",
+      "ground": "1",
+      "spikes": "costume1",
+      "invisible": "costume1",
+      "disappearing": "costume1",
+      "spawn": {
+        "x": -200,
+        "y": -140,
+        "facing": "right"
+      },
+      "goal": {
+        "x": 200,
+        "y": -130
+      }
+    },
+    {
+      "number": 2,
+      "background": "costume2",
+      "ground": "2",
+      "spikes": "costume2",
+      "invisible": "costume2",
+      "disappearing": "costume2",
+      "spawn": {
+        "x": 210,
+        "y": -34,
+        "facing": "left"
+      },
+      "goal": {
+        "x": -181,
+        "y": -130
+      },
+      "assistant": {
+        "x": 0,
+        "y": 0,
+        "sequence": 1
+      }
+    },
+    {
+      "number": 3,
+      "background": "costume3",
+      "ground": "3",
+      "spikes": "costume3",
+      "invisible": "costume3",
+      "disappearing": "costume3",
+      "spawn": {
+        "x": -97,
+        "y": -141,
+        "facing": "right"
+      },
+      "goal": {
+        "x": 129,
+        "y": 3
+      },
+      "assistant": {
+        "x": 0,
+        "y": 0,
+        "sequence": 2
+      }
+    },
+    {
+      "number": 4,
+      "background": "costume4",
+      "ground": "4",
+      "spikes": "costume4",
+      "invisible": "costume4",
+      "disappearing": "costume4",
+      "spawn": {
+        "x": -200,
+        "y": -141,
+        "facing": "right"
+      },
+      "goal": {
+        "x": -180,
+        "y": 80
+      },
+      "assistant": {
+        "x": 0,
+        "y": -43,
+        "sequence": 3
+      }
+    },
+    {
+      "number": 5,
+      "background": "costume5",
+      "ground": "5",
+      "spikes": "costume5",
+      "invisible": "costume5",
+      "disappearing": "costume5",
+      "spawn": {
+        "x": -200,
+        "y": -141,
+        "facing": "right"
+      },
+      "goal": {
+        "x": -180,
+        "y": 80
+      },
+      "assistant": {
+        "x": 0,
+        "y": -100,
+        "sequence": 4
+      }
+    },
+    {
+      "number": 6,
+      "background": "costume6",
+      "ground": "6",
+      "spikes": "costume6",
+      "invisible": "costume6",
+      "disappearing": "costume6",
+      "spawn": {
+        "x": 155,
+        "y": -141,
+        "facing": "left"
+      },
+      "goal": {
+        "x": -180,
+        "y": 80
+      },
+      "assistant": {
+        "x": 64,
+        "y": 40,
+        "sequence": 5
+      }
+    },
+    {
+      "number": 7,
+      "background": "costume7",
+      "ground": "7",
+      "spikes": "costume7",
+      "invisible": "costume7",
+      "disappearing": "costume7",
+      "spawn": {
+        "x": 132,
+        "y": -29,
+        "facing": "left"
+      },
+      "goal": {
+        "x": 165,
+        "y": 130
+      },
+      "key": {
+        "x": -140,
+        "y": -130
+      },
+      "assistant": {
+        "x": -33,
+        "y": 0,
+        "sequence": 6
+      }
+    },
+    {
+      "number": 8,
+      "background": "costume8",
+      "ground": "8",
+      "spikes": "costume8",
+      "invisible": "costume8",
+      "disappearing": "costume8",
+      "spawn": {
+        "x": 214,
+        "y": -141,
+        "facing": "left"
+      },
+      "goal": {
+        "x": -175,
+        "y": -172
+      }
+    },
+    {
+      "number": 9,
+      "background": "costume9",
+      "ground": "9",
+      "spikes": "costume9",
+      "invisible": "costume9",
+      "disappearing": "costume9",
+      "spawn": {
+        "x": -205,
+        "y": -11,
+        "facing": "right"
+      },
+      "goal": {
+        "x": 190,
+        "y": -145
+      }
+    },
+    {
+      "number": 10,
+      "background": "costume10",
+      "ground": "10",
+      "spikes": "costume10",
+      "invisible": "costume10",
+      "disappearing": "costume10",
+      "spawn": {
+        "x": 205,
+        "y": -74,
+        "facing": "left"
+      },
+      "goal": {
+        "x": -30,
+        "y": 2
+      },
+      "key": {
+        "x": -205,
+        "y": -131
+      },
+      "assistant": {
+        "x": 40,
+        "y": -115,
+        "sequence": 7
+      }
+    },
+    {
+      "number": 11,
+      "background": "costume11",
+      "ground": "11",
+      "spikes": "costume11",
+      "invisible": "costume11",
+      "disappearing": "costume11",
+      "spawn": {
+        "x": -180,
+        "y": 73,
+        "facing": "right"
+      },
+      "goal": {
+        "x": 121,
+        "y": 154
+      },
+      "assistant": {
+        "x": 95,
+        "y": -68,
+        "sequence": 8
+      },
+      "saws": [
+        {
+          "x": 240,
+          "y": 155,
+          "size": 700,
+          "movement_y": 0,
+          "movement_x": 0
+        },
+        {
+          "x": 240,
+          "y": 90,
+          "size": 700,
+          "movement_y": 0,
+          "movement_x": 0
+        },
+        {
+          "x": -177,
+          "y": 35,
+          "size": 350,
+          "movement_y": 0,
+          "movement_x": -280
+        },
+        {
+          "x": -123,
+          "y": -157,
+          "size": 750,
+          "movement_y": 0,
+          "movement_x": 0
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "background": "costume12",
+      "ground": "12",
+      "spikes": "costume12",
+      "invisible": "costume12",
+      "disappearing": "costume12",
+      "spawn": {
+        "x": -190,
+        "y": 142,
+        "facing": "right"
+      },
+      "goal": {
+        "x": 190,
+        "y": -135
+      },
+      "saws": [
+        {
+          "x": -135,
+          "y": -115,
+          "size": 600,
+          "movement_y": -280,
+          "movement_x": -320
+        },
+        {
+          "x": 5,
+          "y": 122,
+          "size": 315,
+          "movement_y": 0,
+          "movement_x": 0
+        },
+        {
+          "x": 233,
+          "y": -38,
+          "size": 650,
+          "movement_y": 0,
+          "movement_x": 0
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "background": "costume13",
+      "ground": "13",
+      "spikes": "costume13",
+      "invisible": "costume13",
+      "disappearing": "costume13",
+      "spawn": {
+        "x": -89,
+        "y": 80,
+        "facing": "right"
+      },
+      "goal": {
+        "x": -205,
+        "y": 111
+      },
+      "key": {
+        "x": 82,
+        "y": 120
+      },
+      "saws": [
+        {
+          "x": 117,
+          "y": -15,
+          "size": 350,
+          "movement_y": 0,
+          "movement_x": -130
+        },
+        {
+          "x": -27,
+          "y": -130,
+          "size": 425,
+          "movement_y": 55,
+          "movement_x": 0
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "background": "costume14",
+      "ground": "14",
+      "spikes": "costume14",
+      "invisible": "costume14",
+      "disappearing": "costume14",
+      "spawn": {
+        "x": -143,
+        "y": -139,
+        "facing": "right"
+      },
+      "goal": null,
+      "assistant": {
+        "x": 15,
+        "y": -120,
+        "sequence": 9
+      }
+    }
+  ]
+}
