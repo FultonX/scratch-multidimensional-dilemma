@@ -1,6 +1,7 @@
 from __future__ import annotations
 import json
 from pathlib import Path
+import xml.etree.ElementTree as ET
 import pygame
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,8 +15,27 @@ class Assets:
     def image(self,target,name):
         key=(target,name)
         if key not in self.images:
-            m=self.meta(target,name); self.images[key]=pygame.image.load(ROOT/m['path']).convert_alpha()
+            m=self.meta(target,name)
+            if target=='Text' and m['data_format']=='svg':
+                self.images[key]=self._text_image(m)
+            else:self.images[key]=pygame.image.load(ROOT/m['path']).convert_alpha()
         return self.images[key]
+    def _text_image(self,m):
+        """Rasterize Scratch text costumes without relying on SDL's SVG text support."""
+        root=ET.parse(ROOT/m['path']).getroot()
+        lines=[''.join(node.itertext()) for node in root.iter() if node.tag.endswith('tspan')]
+        if not lines:
+            lines=[''.join(node.itertext()) for node in root.iter() if node.tag.endswith('text')]
+        width=max(1,round(float(root.attrib['width'])));height=max(1,round(float(root.attrib['height'])))
+        surface=pygame.Surface((width,height),pygame.SRCALPHA)
+        font_size=max(12,min(20,height//max(1,len(lines))))
+        font=pygame.font.SysFont('serif',font_size)
+        rendered=[font.render(line,True,(244,244,228)) for line in lines]
+        total=sum(line.get_height() for line in rendered)
+        y=max(0,(height-total)//2)
+        for line in rendered:
+            surface.blit(line,((width-line.get_width())//2,y));y+=line.get_height()
+        return surface.convert_alpha()
     def sound(self,target,name):
         key=(target,name)
         if key not in self.sounds:

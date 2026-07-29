@@ -1,4 +1,5 @@
 import pygame
+from .config import wrap_coordinate
 
 class Player:
     def __init__(self, assets): self.a=assets; self.facing=90; self.reset(0,0,90)
@@ -22,8 +23,8 @@ class Player:
                 if not self.overlaps(solid): break
             self.grounded=self.sy<0; self.sy=0
         elif self.sy: self.grounded=False
-        if self.y>182:self.y=-182;self.sy=0
-        elif self.y<-182:self.y=182;self.sy=0
+        if self.y>182 or self.y<-182:
+            self.y=wrap_coordinate(self.y,182);self.sy=0
         if right:self.sx+=1.2;self.facing=90
         if left:self.sx-=1.2;self.facing=-90
         self.sx*=.8; self.x+=self.sx
@@ -33,8 +34,8 @@ class Player:
                 self.x+=step
                 if not self.overlaps(solid): break
             self.sx=0
-        if self.x>240:self.x=-245;self.sx=0
-        elif self.x<-240:self.x=245;self.sx=0
+        if self.x>240 or self.x<-240:
+            self.x=wrap_coordinate(self.x,240);self.sx=0
         if not self.grounded:self.costume='jump' if self.sy>0 else 'fall'
         elif abs(self.sx)>.2:self.costume=f"run {1+(self.frame//3)%8}"
         else:self.costume=f"idle {1+(self.frame//7)%4}"
