@@ -103,7 +103,7 @@ class Game:
             elif cycle<1.666:t=1-(cycle-1.333)/.333
             else:t=0
             x=d['x']-d['movement_x']*t;y=d['y']-d['movement_y']*t
-            im=self.a.image('saws','costume2');scale=d['size']/200;im=pygame.transform.scale(im,(round(im.width*scale),round(im.height*scale)));im=pygame.transform.rotate(im,-self.angle*3.5)
+            im=self.a.image('saws','costume2');scale=d['size']/200;im=pygame.transform.scale(im,(round(im.get_width()*scale),round(im.get_height()*scale)));im=pygame.transform.rotate(im,-self.angle*3.5)
             out.append((im,im.get_rect(center=(round(240+x),round(180-y)))))
         return out
     def render(self):
@@ -114,7 +114,7 @@ class Game:
         if self.key_active:
             self.a.draw(self.canvas,'Key','costume1',self.d['key']['x'],self.d['key']['y'],200,direction=80+math.sin(self.saw_time)*10)
         if self.d['goal']:
-            g=self.d['goal']; im=self.a.image('Goal','costume1');im=pygame.transform.scale(im,(round(im.width*1.75),round(im.height*1.75)));im=pygame.transform.rotate(im,-self.angle);im.set_alpha(230);self.canvas.blit(im,im.get_rect(center=(240+g['x'],180-g['y'])))
+            g=self.d['goal']; im=self.a.image('Goal','costume1');im=pygame.transform.scale(im,(round(im.get_width()*1.75),round(im.get_height()*1.75)));im=pygame.transform.rotate(im,-self.angle);im.set_alpha(230);self.canvas.blit(im,im.get_rect(center=(240+g['x'],180-g['y'])))
         for im,r in self.saws():self.canvas.blit(im,r)
         if self.state!='dying' or int(self.timer*10)%2:self.p.draw(self.canvas)
         if self.state=='dialogue' or self.state=='finale':

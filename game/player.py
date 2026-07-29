@@ -5,7 +5,7 @@ class Player:
     def reset(self,x,y,facing):
         self.x,self.y=float(x),float(y); self.sx=self.sy=0.; self.facing=facing; self.grounded=False; self.frame=0; self.costume='idle 1'
     def mask_at(self,x=None,y=None,costume='Hitbox'):
-        m=self.a.meta('Player',costume); im=self.a.image('Player',costume); scale=3/m['bitmap_resolution']; im=pygame.transform.scale(im,(max(1,round(im.width*scale)),max(1,round(im.height*scale))))
+        m=self.a.meta('Player',costume); im=self.a.image('Player',costume); scale=3/m['bitmap_resolution']; im=pygame.transform.scale(im,(max(1,round(im.get_width()*scale)),max(1,round(im.get_height()*scale))))
         px=round(240+(self.x if x is None else x)-m['rotation_center_x']*scale); py=round(180-(self.y if y is None else y)-m['rotation_center_y']*scale)
         return pygame.mask.from_surface(im), (px,py)
     def overlaps(self, terrain, x=None,y=None):
