@@ -36,6 +36,10 @@ class Assets:
         for line in rendered:
             surface.blit(line,((width-line.get_width())//2,y));y+=line.get_height()
         return surface.convert_alpha()
+    def text_surface(self,text,font_size=16,color=(255,255,255)):
+        """Render UI copy with the same serif raster text used by intro cards."""
+        font=pygame.font.SysFont('serif',font_size)
+        return font.render(text,True,color).convert_alpha()
     def sound(self,target,name):
         key=(target,name)
         if key not in self.sounds:
