@@ -13,6 +13,7 @@ class Game:
         self.canvas=pygame.Surface((WIDTH,HEIGHT)); self.clock=pygame.time.Clock(); self.a=Assets(); self.p=Player(self.a)
         self.levels=json.loads((ROOT/'data/levels.json').read_text())['levels']; self.dialogues=json.loads((ROOT/'data/dialogue.json').read_text())['sequences']
         self.level=1; self.state='playing'; self.timer=0; self.title_time=0; self.angle=0; self.voice=pygame.mixer.Channel(2); self.fx=pygame.mixer.Channel(3)
+        self.loaded_levels=set()
         self.load_level(1); self.play_music('Hungarian Dance No')
     def play_music(self,name):
         try: pygame.mixer.music.load(ROOT/self.a.meta('Stage',name,'sound')['path']); pygame.mixer.music.set_volume(.2); pygame.mixer.music.play(-1)
@@ -22,6 +23,7 @@ class Game:
         if s: (channel or self.fx).play(s); return s.get_length()
         return 0
     def load_level(self,n):
+        first_load=n not in self.loaded_levels; self.loaded_levels.add(n)
         self.level=n; self.d=self.levels[n-1]
         facing=90 if self.d['spawn']['facing']=='right' else -90; self.p.reset(self.d['spawn']['x'],self.d['spawn']['y'],facing)
         self.ground=self.a.stage_surface('Ground',self.d['ground']); self.solid=pygame.mask.from_surface(self.ground)
@@ -30,7 +32,7 @@ class Game:
         self.dis_surf=self.a.stage_surface('disappearing platforms',self.d['disappearing']); self.dis=pygame.mask.from_surface(self.dis_surf)
         self.key_active='key' in self.d; self.platforms=False; self.saw_time=0
         if n==14: self.state='finale'; self.final_actions=None; self.timer=1.5
-        elif 'assistant' in self.d: self.begin_dialogue(self.d['assistant']['sequence'])
+        elif 'assistant' in self.d and first_load: self.begin_dialogue(self.d['assistant']['sequence'])
         else:self.state='playing'
     def begin_dialogue(self,seq): self.state='dialogue';self.lines=self.dialogues[str(seq)];self.line=-1;self.timer=.35;self.card=None
     def next_line(self):
