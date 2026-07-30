@@ -145,7 +145,9 @@ class Game:
         if event.type in (pygame.MOUSEBUTTONUP,pygame.FINGERUP):self.tutorial_pointer_down=False
         if self.idle_warning is not None:
             self.idle_warning=None
-            return
+            # Treat returning from an idle pause like a fresh kiosk session:
+            # the input that wakes the game should reveal the controls again.
+            self.tutorial_pending=True;self.tutorial=False;self.tutorial_clicks=0;self.tutorial_hold=0.;self.tutorial_pointer_down=False
         pointer_down=event.type in (pygame.MOUSEBUTTONDOWN,pygame.FINGERDOWN)
         if pointer_down:self.tutorial_pointer_down=True
         if self.tutorial:

@@ -46,14 +46,17 @@ def test_first_input_replaces_touch_prompt_with_tutorial():
     assert game.tutorial
 
 
-def test_input_dismisses_idle_warning_without_opening_tutorial():
+def test_first_input_after_idle_reset_shows_tutorial_again():
     game = bare_game()
+    game.tutorial_pending = False
     game.idle_elapsed = IDLE_SECONDS
     game.idle_warning = IDLE_WARNING_SECONDS
     game.note_input(pygame.event.Event(pygame.FINGERDOWN, finger_id=0, x=.5, y=.5))
     assert game.idle_warning is None
     assert game.idle_elapsed == 0
-    assert game.tutorial_pending
+    assert not game.tutorial_pending
+    assert game.tutorial
+    assert game.tutorial_clicks == 1
 
 
 def test_idle_warning_pauses_normal_update(monkeypatch):
